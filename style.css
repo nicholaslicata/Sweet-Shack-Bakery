@@ -22,6 +22,8 @@ body {
 
 html, body {
     height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Navigation */
@@ -168,6 +170,7 @@ html, body {
     min-height: 100vh;
     background-color: var(--home-main-color);
     padding: 2em 0;
+    overflow-x: hidden;
 }
 
 .menu-container {
