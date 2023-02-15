@@ -76,6 +76,53 @@ function prevSweet() {
     }
 }
 
+// Menu section
+
+const menu = [
+    {
+        item: '- Cakes -',
+        price: '$18.00',
+        flavors: ['Carrot Cake', 'Devils Food Cake', 'Lemon Cake', 'Red Velvet Cake', 'Strawberry Short Cake'],
+    },
+    {
+        item: '- Cookies -',
+        price: '$3.50',
+        flavors: ['Chocolate Chip', 'Oatmeal', 'Peanut Butter', 'Snickerdoole', 'Sugar'],
+    },
+    {
+        item: '- Cupcakes -',
+        price: '$5.00',
+        flavors: ['Carrot', 'Chocolate', 'Cookies and Cream', 'Red Velvet', 'Vanilla'],
+    },
+    {
+        item: '- Donuts- ',
+        price: '$5.00',
+        flavors: ['Boston Creme', 'Chocolate Frosted', 'Glazed', 'Jelly', 'Strawberry Frosted']
+    },
+]
+
+const menuContainer = document.querySelector('.menu-container');
+
+window.addEventListener('DOMContentLoaded', function() {
+    menu.map(menuItem => showMenu(menuItem));
+})
+
+function showMenu(menuItems) {
+    const menuItemContainer = document.createElement('div');
+    menuItemContainer.classList.add('menu-item-container');
+    menuContainer.appendChild(menuItemContainer);
+
+    const menuItem = document.createElement('h2');
+    menuItem.textContent = menuItems.item;
+    menuItem.classList.add('menu-item');
+    menuItemContainer.appendChild(menuItem);
+
+    const menuItemFlavors = document.createElement('li');
+    menuItemFlavors.textContent = menuItems.flavors.join(', ')
+    menuItemFlavors.classList.add('menu-item-flavors');
+    menuItemContainer.appendChild(menuItemFlavors);
+}
+
 
 
 
