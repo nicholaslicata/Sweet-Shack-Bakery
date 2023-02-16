@@ -22,19 +22,23 @@ navLink.forEach(link => link.addEventListener('click', function() {
 const sweets = [
     {
         pic: "images/cake1.jpg",
-        label: "Cakes"
+        label: "Cakes",
+        alt: "Chocolate covered cake"
     },
     {
         pic: "images/cookies1.jpg",
-        label: "Cookies"
+        label: "Cookies",
+        alt: "Chocolate chip cookies"
     },
     {
         pic: "images/cupcake2.jpg",
-        label: "Cupcakes"
+        label: "Cupcakes",
+        alt: "Chocolate cupcakes"
     },
     {
         pic: "images/donuts3.jpg",
-        label: "Donuts"
+        label: "Donuts",
+        alt: "Variety of donuts"
     }
 ]
 
@@ -54,6 +58,7 @@ prevButton.addEventListener('click', prevSweet);
 function showSweet() {
     sweetLabel.textContent = sweets[sweetIndex].label;
     sweetPic.src = sweets[sweetIndex].pic;
+    sweetPic.setAttribute('alt', sweets[sweetIndex].alt);
 }
 
 function nextSweet() {
